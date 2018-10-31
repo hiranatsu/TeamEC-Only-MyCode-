@@ -18,9 +18,12 @@ public class ProductListAction extends ActionSupport implements SessionAware{
 	private int categoryId=1;
 
 	public String execute(){
+        //画面遷移に関する記述
 		session.remove("reserve");
-		String result = ERROR;
-		if (!(session.containsKey("mCategoryDtoList"))) {
+
+        String result = ERROR;
+        
+		if (!session.containsKey("mCategoryDtoList")) {
 			session.put("mCategoryDtoList", (new MCategoryDAO()).getMCategoryList());
 		}
 		ProductInfoDAO piDAO = new ProductInfoDAO();
@@ -36,6 +39,7 @@ public class ProductListAction extends ActionSupport implements SessionAware{
 		session.put("productInfoDtoList", pnDTO.getCurrentProductInfoPage());
 		session.put("nextPageNo", pnDTO.getNextPageNo());
 		session.put("previousPageNo", pnDTO.getPreviousPageNo());
+        
 		if(!session.containsKey("mCategoryList")){
 			session.put("mCategoryDtoList", (new MCategoryDAO()).getMCategoryList());
 		}
