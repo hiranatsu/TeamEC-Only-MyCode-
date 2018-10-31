@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+body, html {
+	margin : 0; /* 余白の削除 */
+	padding : 0; /* 余白の削除 */
+	width : 100%;
+	height : 100%;
+}
+
+#contents {
+	width : 100%;
+	margin : 0 auto;
+	padding : 5vh 0 10vh 0;
+}
+
+.complete-contents{
+	width : 100%;
+	margin : 0 auto;
+	padding : 10% 0;
+}
+
+.complete-contents-h1 {
+	font-size:170%;
+	margin : 0 0;
+}
+
+/* メッセージ */
+.success {
+	font-size : 140%;
+	text-align:center;
+	width:100%;
+}
+
+.error{
+	width:100%;
+	height:auto;
+	margin:25px 0;
+}
+
+.error-message{
+	width:100%;
+	text-align:center;
+	font-weight:bold;
+	color:#FF0000;
+}
+
+/* 見出しタグ */
+h1{
+	text-align:center;
+	margin:auto;
+	margin-bottom:25px;
+	font-weight: inherit;
+}
+
+h2{
+	text-align:center;
+	margin:auto;
+	font-weight: inherit;
+}
+
